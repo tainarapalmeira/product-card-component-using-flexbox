@@ -1,0 +1,142 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+/* BODY */
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+/* MAIN */
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90vw;
+    /* min-height: 85vh; */
+    height: 85vh;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.container-imagem {
+    height: 40vh;
+    flex-grow: 1;
+}
+
+img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.container-anuncio {
+    flex-grow: 1;
+    padding: 0 1rem;
+    line-height: 1.5;
+    font-family: Montserrat;
+}
+
+.container-anuncio p {
+    font-size: .9rem;
+    color: hsl(228, 12%, 48%);
+    padding: 7px;
+    font-weight: 500;
+}
+
+.container-anuncio .categoria {
+    letter-spacing: .2rem;
+    font-stretch: 50%;
+}
+
+.container-anuncio h1 {
+    font: 2rem Fraunces;
+    font-weight: 700;
+    padding: 7px;
+    line-height: 1;
+}
+
+.precos {
+    display: flex;
+    align-items: center;
+}
+
+.novo-preco p {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+}
+
+.antigo-preco p {
+    font-size: .8rem;
+    text-decoration: line-through;
+    padding-bottom: 10px;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    max-height: 7vh;
+    width: 80%;
+    padding: 15px 32px;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+button img {
+    max-height: 85%;
+    width: auto;
+}
+
+.attribution {
+    font: .7rem Montserrat;
+    text-align: center;
+    padding: .4rem;
+}
+
+/* MEDIA QUERY */
+@media only screen and (min-width: 1055px) {
+    #container {
+        flex-wrap: nowrap;
+        max-width: 40vw;
+        height: 50vh;
+        align-items: center;
+    }
+
+    .container-imagem {
+        height: 85vh;
+        width: 50vw;
+    }
+
+    .container-imagem img {
+        height: 100%;
+        object-fit: cover;
+        /* object-position: 50%; */
+    }
+}

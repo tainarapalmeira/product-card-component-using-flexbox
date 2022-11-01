@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: hsl(30, 38%, 92%);
+}
+
+h1 {
+    font-family: Fraunces;
+    font-size: 54px;
+}
+
+p {
+    font-family: Montserrat;
+    font-size: 20px;
+}
+
+.container {
+    width: 70rem;
+    height: 50rem;
+    margin: auto;
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template: 
+    "container-imagem container-anuncio";
+    border-radius: 15px;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+.container-imagem {
+    grid-area:container-imagem;
+    background-image: url(./images/image-product-desktop.jpg);
+    background-position: center top;
+}
+
+.container-anuncio {
+    grid-area: container-anuncio;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.container-anuncio p {
+    padding: 1rem;
+    color: hsl(228, 12%, 48%);
+}
+
+.container-anuncio h1  {
+    padding: 1rem;
+}
+
+.precos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container-anuncio .novo-preco p {
+    font-family: Fraunces;
+    font-size: 3rem;
+    color: hsl(158, 36%, 37%);
+}
+
+.container-anuncio .antigo-preco p {
+    font-family: Montserrat;
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+
+button {
+    width: 20rem;
+    padding: 1.5rem;
+    margin: 3rem 3rem 3rem 5rem;
+    border: none;
+    background: none;
+    border-radius: 10px;
+    background-color: hsl(158, 36%, 37%);
+    font-family: Montserrat;
+    font-weight: 700;
+    color: hsl(30, 38%, 92%);
+}
+
+button img {
+    padding-right: 1rem;
+}
+
