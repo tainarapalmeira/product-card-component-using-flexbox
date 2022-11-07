@@ -1,142 +1,154 @@
-/* CSS RESET */
+/* || CSS RESET */
 * {
     margin: 0;
     padding: 0;
-    border: 0;
+    text-decoration: 0;
     box-sizing: border-box;
-    vertical-align: baseline;
+    font-size: 14px;
 }
 
-/* BODY */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+    line-height: 0;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+/* || GENERAL STYLES */
 body {
     background-color: hsl(30, 38%, 92%);
 }
 
-/* MAIN */
 main {
-    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: Montserrat, sans-serif;
 }
 
+/* || POSITIONING OF CARD ELEMENTS*/
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 90vw;
-    /* min-height: 85vh; */
-    height: 85vh;
-    background-color: hsl(0, 0%, 100%);
+    min-height: 92vh;
+    width: 92vw;
     border-radius: 15px;
     overflow: hidden;
 }
 
 .container-imagem {
-    height: 40vh;
-    flex-grow: 1;
+    min-height: 39%;
+    width: 100%;
+}
+
+picture {
+    height: 100%;
 }
 
 img {
-    max-height: 100%;
-    width: 100%;
+    min-height: 100%;
     object-fit: cover;
-    object-position: 50% 30%;
 }
 
 .container-anuncio {
-    flex-grow: 1;
-    padding: 0 1rem;
-    line-height: 1.5;
-    font-family: Montserrat;
-}
-
-.container-anuncio p {
-    font-size: .9rem;
-    color: hsl(228, 12%, 48%);
-    padding: 7px;
-    font-weight: 500;
-}
-
-.container-anuncio .categoria {
-    letter-spacing: .2rem;
-    font-stretch: 50%;
-}
-
-.container-anuncio h1 {
-    font: 2rem Fraunces;
-    font-weight: 700;
-    padding: 7px;
-    line-height: 1;
+    min-height: 61%;
+    padding: 1.5rem;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 2;
 }
 
 .precos {
     display: flex;
     align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1.125rem;
 }
 
-.novo-preco p {
-    font-family: Fraunces;
-    font-weight: 700;
-    font-size: 2rem;
-    color: hsl(158, 36%, 37%);
-}
-
-.antigo-preco p {
-    font-size: .8rem;
-    text-decoration: line-through;
-    padding-bottom: 10px;
-}
-
-.center-button {
-    display: flex;
-    justify-content: center;
-}
-
+/* || BUTTON */
 button {
-    max-height: 7vh;
-    width: 80%;
-    padding: 15px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: hsl(158, 36%, 37%);
-    border: none;
-    border-radius: 10px;
-    margin: auto;
-    color: hsl(0, 0%, 100%);
-    font-size: 1rem;
+    padding: 0.9375rem 3.875rem;
+    border-radius: 0.5rem;
+    gap: 0.7rem;
     font-weight: 700;
-    text-align: center;
-    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    max-width: 60%;
 }
 
-button img {
-    max-height: 85%;
-    width: auto;
+button:hover {
+    background-color: hsl(157, 43%, 18%);
+}
+
+/* || TYPOGRAPHY */
+h1 {
+    font: 700 2.3rem Fraunces;
+    padding-bottom: 1rem;
+}
+
+.container-anuncio p, .attribution, .attribution a {
+    font-size: 1.02rem;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+    color: hsl(228, 12%, 48%);
+}
+
+.precos h2 {
+    font: 700 2rem Fraunces;
+    color: hsl(158, 36%, 37%);
+    padding-right: 2%;
+}
+
+.precos span {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
 }
 
 .attribution {
-    font: .7rem Montserrat;
     text-align: center;
-    padding: .4rem;
+    margin: 4rem 4rem 0;
 }
 
-/* MEDIA QUERY */
-@media only screen and (min-width: 1055px) {
-    #container {
+/* || MEDIA QUERY - Desktop version*/
+@media only screen and (min-width: 43rem) {
+    /* || POSITIONING OF CARD ELEMENTS*/
+    .container {
         flex-wrap: nowrap;
-        max-width: 40vw;
-        height: 50vh;
-        align-items: center;
+        max-height: 32.05rem;
+        max-width: 42.875rem;
+        overflow: hidden;
     }
 
     .container-imagem {
-        height: 85vh;
-        width: 50vw;
+        height: 100%;
+        width: 50%;
     }
 
-    .container-imagem img {
+    .container-anuncio {
         height: 100%;
-        object-fit: cover;
-        /* object-position: 50%; */
+        width: 50%;
+        padding: 2rem;
+    }
+
+    .container-anuncio p,
+    h1 {
+        padding-bottom: 1.45rem;
+    }
+
+    button {
+        min-width: 50%;
     }
 }

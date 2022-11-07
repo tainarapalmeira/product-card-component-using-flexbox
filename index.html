@@ -23,12 +23,15 @@
 
 <body>
   <main>
-    <div class="container" id="container">
-      <figure class="container-imagem">
-        <img src="./images/image-product-desktop.jpg" alt="Gabrielle Essence Eau De Parfum">
-      </figure>
+    <div class="container">
+      <div class="container-imagem">
+        <picture>
+          <source media="(min-width:43rem)" srcset="./images/image-product-desktop.jpg">
+          <img src="./images/image-product-mobile.jpg" alt="Gabrielle Essence Eau De Parfum" style="width:auto;">
+        </picture>
+      </div>
       <div class="container-anuncio">
-        <p class="container-anuncio categoria">PERFUME</p>
+        <p>P E R F U M E</p>
         <h1>
           Gabrielle Essence Eau De Parfum
         </h1>
@@ -38,24 +41,18 @@
           Perfumer-Creator for the House of CHANEL.
         </p>
         <div class="precos">
-          <div class="novo-preco">
-            <p>
-              $149.99
-            </p>
-          </div>
-          <div class="antigo-preco">
-            <p>
-              $169.99
-            </p>
-          </div>
+          <h2>
+            $149.99
+          </h2>
+          <span>
+            $169.99
+          </span>
         </div>
 
-        <div class="center-button">
-          <button type="button">
-            <img src="./images/icon-cart.svg" alt="Icone de um carrinho de compras">
-            Add to Cart
-          </button>
-        </div>
+        <button type="button">
+          <img src="./images/icon-cart.svg" alt="Icone de um carrinho de compras">
+          Add to Cart
+        </button>
       </div>
     </div>
   </main>
